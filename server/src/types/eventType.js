@@ -1,4 +1,9 @@
-import { GraphQLString, GraphQLObjectType, GraphQLID } from 'graphql';
+import {
+  GraphQLString,
+  GraphQLObjectType,
+  GraphQLID,
+  GraphQLFloat,
+} from 'graphql';
 
 const EventType = new GraphQLObjectType({
   name: 'Event',
@@ -7,6 +12,8 @@ const EventType = new GraphQLObjectType({
     id: { type: GraphQLID },
     title: { type: GraphQLString },
     body: { type: GraphQLString },
+    price: { type: GraphQLFloat },
+    date: { type: GraphQLString },
   }),
 });
 

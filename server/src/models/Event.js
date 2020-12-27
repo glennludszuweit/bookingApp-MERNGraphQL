@@ -4,12 +4,18 @@ const eventSchema = mongoose.Schema({
   title: {
     type: String,
     required: true,
-    default: 'Test event',
   },
   body: {
     type: String,
     required: true,
-    default: 'Test event body',
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+  date: {
+    type: Date,
+    required: true,
   },
 });
 
