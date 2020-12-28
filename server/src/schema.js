@@ -1,6 +1,7 @@
 import { GraphQLSchema, GraphQLObjectType } from 'graphql';
 import { getEvents } from './queries/eventQuery.js';
 import { createEvent } from './mutations/eventMutation.js';
+import { register } from './mutations/userMutation.js';
 
 const QueryType = new GraphQLObjectType({
   name: 'QueryType',
@@ -11,7 +12,7 @@ const QueryType = new GraphQLObjectType({
 const MutationType = new GraphQLObjectType({
   name: 'MutationType',
   description: 'Mutations',
-  fields: { createEvent },
+  fields: { createEvent, register },
 });
 
 export default new GraphQLSchema({

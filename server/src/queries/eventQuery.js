@@ -6,6 +6,6 @@ export const getEvents = {
   type: new GraphQLList(EventType),
   description: 'Get all events',
   async resolve() {
-    return Event.find();
+    return await Event.find();
   },
 };
